@@ -10,8 +10,11 @@ class AnimatedBottomDrawer extends GetView<BaseController> {
   @override
   Widget build(BuildContext context) {
     return Obx(() => NavigationBarTheme(
-        data: NavigationBarThemeData(indicatorColor: lightColorScheme.primary),
+        data:
+            NavigationBarThemeData(indicatorColor: lightColorScheme.surfaceVariant,
+            height: 70),
         child: NavigationBar(
+          backgroundColor: lightColorScheme.background,
           onDestinationSelected: (v) => controller.setPage(PagesEnum.values[v]),
           selectedIndex: controller.page,
           destinations: const [

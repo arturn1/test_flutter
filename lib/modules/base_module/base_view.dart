@@ -5,6 +5,7 @@ import 'package:test_flutter/modules/chat_module/ChatView.dart';
 import 'package:test_flutter/modules/home_module/HomeView.dart';
 import 'package:test_flutter/modules/log_module/LogView.dart';
 import 'package:test_flutter/modules/profile_module/ProfileView.dart';
+import 'package:test_flutter/src/shared/themes/color_schemes.g.dart';
 
 import '../../src/shared/widgets/AnimatedBottomDrawer.dart';
 
@@ -22,7 +23,11 @@ class BaseView extends GetView<BaseController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Nome da Empresa'),
+        backgroundColor: lightColorScheme.primary,
+        title: const Text('Saint-Gobain',
+        style: TextStyle(
+          color: Colors.white
+        ),),
       ),
       body: SafeArea(
           child: AnimatedSwitcher(
