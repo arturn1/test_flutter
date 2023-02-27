@@ -23,6 +23,7 @@ class BaseView extends GetView<BaseController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 80,
         centerTitle: true,
         backgroundColor: lightColorScheme.primary,
         title: Text('Saint-Gobain',
@@ -31,11 +32,12 @@ class BaseView extends GetView<BaseController> {
           fontWeight: FontWeight.bold
         ),),
       ),
-      body: SafeArea(
-          child: AnimatedSwitcher(
-        duration: const Duration(milliseconds: 300),
-        child: Obx(() => _mainContents[controller.page]),
-      )),
+      body: Obx(() => SafeArea(
+            child: AnimatedSwitcher(
+          duration: const Duration(milliseconds: 300),
+              child: _mainContents[controller.page],
+        )),
+      ),
       bottomNavigationBar: const AnimatedBottomDrawer(),
     );
   }

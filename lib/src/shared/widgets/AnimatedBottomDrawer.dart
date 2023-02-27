@@ -17,10 +17,10 @@ class AnimatedBottomDrawer extends GetView<BaseController> {
           onDestinationSelected: (v) => controller.setPage(PagesEnum.values[v]),
           selectedIndex: controller.page,
           destinations: const [
-            NavigationDestination(icon: Icon(Icons.home_filled), label: "Home"),
-            NavigationDestination(icon: Icon(Icons.pages), label: "Logs"),
-            NavigationDestination(icon: Icon(Icons.chat), label: "Chat"),
-            NavigationDestination(icon: Icon(Icons.person), label: "Perfil")
+            NavigationDestination(icon: Icon(Icons.home_outlined),selectedIcon: (Icon(Icons.home)), label: "Home"),
+            NavigationDestination(icon: Icon(Icons.pages_outlined), selectedIcon: (Icon(Icons.pages)),label: "Logs"),
+            NavigationDestination(icon: Icon(Icons.chat_outlined), selectedIcon: (Icon(Icons.chat)),label: "Chat"),
+            NavigationDestination(icon: Icon(Icons.person_outline), selectedIcon: (Icon(Icons.person)),label: "Perfil")
           ],
         )));
   }
