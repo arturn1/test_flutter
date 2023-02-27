@@ -29,15 +29,15 @@ class HomeView extends StatelessWidget {
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const <Widget>[
+                children: <Widget>[
                   Text(
                     "Bom dia,",
-                    style: TextStyle(fontWeight: FontWeight.w600,
+                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: Theme.of(context).textTheme.titleSmall?.fontSize,
                     color: Colors.white),
                   ),
                   Text(
                     "Artur Anderson",
-                    style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18,
+                    style: TextStyle(fontWeight: FontWeight.w900, fontSize: Theme.of(context).textTheme.titleLarge?.fontSize,
                     color: Colors.white),
                   ),
                 ],
@@ -60,97 +60,92 @@ class HomeView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const <Widget>[
-                        Text(
-                          "Dispêndio",
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          "\$ 15.000,92",
-                          style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        "Dispêndio",
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold,
+                        fontSize: Theme.of(context).textTheme.titleMedium?.fontSize),
+                      ),
+                      Text(
+                        "\$ 15.000,92",
+                        style: TextStyle(
+                            fontSize: Theme.of(context).textTheme.headlineMedium?.fontSize,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Row(
-                          children: <Widget>[
-                            Padding(
-                              padding: const EdgeInsets.only(right: 8.0),
-                              child: CircleAvatar(
-                                  radius: 15,
-                                  backgroundColor: Colors.white.withOpacity(0.3),
-                                  child: const Icon(Icons.arrow_upward,
-                                    color: Colors.white,
-                                  )),
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const <Widget>[
-                                Text(
-                                  "Exclusão",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 12),
-                                ),
-                                Text(
-                                  "\$ 320.490,57",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 14),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                        Row(
-                          children: <Widget>[
-                            Padding(
-                              padding: const EdgeInsets.only(right: 8.0),
-                              child: CircleAvatar(
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.only(right: 8.0),
+                            child: CircleAvatar(
                                 radius: 15,
                                 backgroundColor: Colors.white.withOpacity(0.3),
-                                  child: const Icon(Icons.arrow_downward,
+                                child: const Icon(Icons.arrow_upward,
+                                  color: Colors.white,
+                                )),
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "Exclusão",
+                                style: TextStyle(
                                     color: Colors.white,
-                                  )),
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const <Widget>[
-                                Text(
-                                  "Beneficio",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500,
-                                  fontSize: 12),
-                                ),
-                                Text(
-                                  "\$ 150.000,92",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                  fontSize: 14),
-                                ),
-                              ],
-                            )
-                          ],
-                        )
-                      ],
-                    ),
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: Theme.of(context).textTheme.titleMedium?.fontSize),
+                              ),
+                              Text(
+                                "\$ 320.490,57",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: Theme.of(context).textTheme.labelLarge?.fontSize,
+                              ),)
+                            ],
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.only(right: 8.0),
+                            child: CircleAvatar(
+                              radius: 15,
+                              backgroundColor: Colors.white.withOpacity(0.3),
+                                child: const Icon(Icons.arrow_downward,
+                                  color: Colors.white,
+                                )),
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "Beneficio",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w500,
+                                fontSize: Theme.of(context).textTheme.titleMedium?.fontSize),
+                              ),
+                              Text(
+                                "\$ 150.000,92",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                fontSize: Theme.of(context).textTheme.labelLarge?.fontSize),
+                              ),
+                            ],
+                          )
+                        ],
+                      )
+                    ],
                   )
                 ],
               ),
@@ -163,39 +158,46 @@ class HomeView extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.all(8.0),
-                    child: Text("Ultimas Atualizações", style: TextStyle(fontWeight: FontWeight.bold),),
+                    child: Text("Ultimas Atualizações", style: TextStyle(fontWeight: FontWeight.bold, fontSize: Theme.of(context).textTheme
+                    .titleLarge?.fontSize),),
                   ),
                   Expanded(
                       child: ListView(
-                        children: const [
+                        children: [
                           ListTile(
-                            leading: CircleAvatar(
+                            leading: const CircleAvatar(
                                 backgroundColor: Colors.lightBlue,
                                 child: Icon(Icons.factory),
                             ),
-                            title: Text('Projetos', style: TextStyle(fontSize: 14),),
-                            subtitle: Text('Foram adicionados 4 novos Projetos', style: TextStyle(fontSize: 12),),
-                            trailing: Icon(Icons.more_vert),
+                            title: Text('Projetos', style: TextStyle(fontSize: Theme.of(context).textTheme
+                                .titleMedium?.fontSize),),
+                            subtitle: Text('Foram adicionados 4 novos Projetos', style: TextStyle(fontSize: Theme.of(context).textTheme
+                                .labelLarge?.fontSize),),
+                            trailing: const Icon(Icons.more_vert),
                           ),
                           ListTile(
-                            leading: CircleAvatar(
+                            leading: const CircleAvatar(
                               backgroundColor: Colors.lightGreenAccent,
                               child: Icon(Icons.person),
                             ),
-                            title: Text('Staffs', style: TextStyle(fontSize: 14),),
-                            subtitle: Text('Foram adicionados 2 novos Funcionários', style: TextStyle(fontSize: 12),),
-                            trailing: Icon(Icons.more_vert),
+                            title: Text('Staffs', style: TextStyle(fontSize: Theme.of(context).textTheme
+                                .titleMedium?.fontSize),),
+                            subtitle: Text('Foram adicionados 2 novos Funcionários', style: TextStyle(fontSize: Theme.of(context).textTheme
+                                .labelLarge?.fontSize),),
+                            trailing: const Icon(Icons.more_vert),
                           ),
                           ListTile(
-                            leading: CircleAvatar(
+                            leading: const CircleAvatar(
                               backgroundColor: Colors.redAccent,
                               child: Icon(Icons.construction),
                             ),
-                            title: Text('Material', style: TextStyle(fontSize: 14),),
-                            subtitle: Text('Foi adicionado 1 novo Material', style: TextStyle(fontSize: 12),),
-                            trailing: Icon(Icons.more_vert),
+                            title: Text('Material', style: TextStyle(fontSize: Theme.of(context).textTheme
+                                .titleMedium?.fontSize),),
+                            subtitle: Text('Foi adicionado 1 novo Material', style: TextStyle(fontSize: Theme.of(context).textTheme
+                                .labelLarge?.fontSize),),
+                            trailing: const Icon(Icons.more_vert),
                           )
                         ],
                       ))

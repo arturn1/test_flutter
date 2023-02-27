@@ -8,16 +8,15 @@ class LogDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return  SizedBox(
         height: 150,
-        width: Get.width,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
-                children: const [
-                  Text("Nome: ", style: TextStyle(fontWeight: FontWeight.bold),),
-                  Text("Artur Anderson Patricio"),
+                children: [
+                  Text("Nome: ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: Theme.of(context).textTheme.titleSmall?.fontSize),),
+                  Text("Artur Anderson Patricio", style: TextStyle(fontSize: Theme.of(context).textTheme.titleSmall?.fontSize),),
                 ],
               ),
               Row(

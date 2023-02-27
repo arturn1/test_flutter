@@ -23,10 +23,12 @@ class BaseView extends GetView<BaseController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: lightColorScheme.primary,
-        title: const Text('Saint-Gobain',
+        title: Text('Saint-Gobain',
         style: TextStyle(
-          color: Colors.white
+          color: lightColorScheme.onPrimary,
+          fontWeight: FontWeight.bold
         ),),
       ),
       body: SafeArea(
