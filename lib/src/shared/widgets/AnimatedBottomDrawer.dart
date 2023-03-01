@@ -9,19 +9,15 @@ class AnimatedBottomDrawer extends GetView<BaseController> {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(() => NavigationBarTheme(
-        data:
-            NavigationBarThemeData(indicatorColor: lightColorScheme.surfaceVariant,),
-        child: NavigationBar(
-          backgroundColor: lightColorScheme.background,
-          onDestinationSelected: (v) => controller.setPage(PagesEnum.values[v]),
-          selectedIndex: controller.page,
-          destinations: const [
-            NavigationDestination(icon: Icon(Icons.home_outlined),selectedIcon: (Icon(Icons.home)), label: "Home"),
-            NavigationDestination(icon: Icon(Icons.pages_outlined), selectedIcon: (Icon(Icons.pages)),label: "Logs"),
-            NavigationDestination(icon: Icon(Icons.chat_outlined), selectedIcon: (Icon(Icons.chat)),label: "Chat"),
-            NavigationDestination(icon: Icon(Icons.person_outline), selectedIcon: (Icon(Icons.person)),label: "Perfil")
-          ],
-        )));
+    return Obx(() => NavigationBar(
+      onDestinationSelected: (v) => controller.setPage(PagesEnum.values[v]),
+      selectedIndex: controller.page,
+      destinations: const [
+        NavigationDestination(icon: Icon(Icons.home_outlined),selectedIcon: (Icon(Icons.home)), label: "Home"),
+        NavigationDestination(icon: Icon(Icons.pages_outlined), selectedIcon: (Icon(Icons.pages)),label: "Logs"),
+        NavigationDestination(icon: Icon(Icons.chat_outlined), selectedIcon: (Icon(Icons.chat)),label: "Chat"),
+        NavigationDestination(icon: Icon(Icons.person_outline), selectedIcon: (Icon(Icons.person)),label: "Perfil")
+      ],
+    ));
   }
 }

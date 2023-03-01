@@ -17,7 +17,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      theme: ThemeData(useMaterial3: true, colorScheme: lightColorScheme),
+      theme: ThemeData(useMaterial3: true, colorScheme: lightColorScheme,
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+        hoverColor: Colors.transparent,),
+      darkTheme: ThemeData(useMaterial3: true, colorScheme: darkColorScheme,
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+        hoverColor: Colors.transparent,),
       debugShowCheckedModeBanner: false,
       home: BaseView(),
     );

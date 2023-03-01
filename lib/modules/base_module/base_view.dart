@@ -25,11 +25,12 @@ class BaseView extends GetView<BaseController> {
       appBar: AppBar(
         toolbarHeight: 80,
         centerTitle: true,
-        backgroundColor: lightColorScheme.primary,
+        backgroundColor: Theme.of(context).colorScheme.primaryContainer,
         title: Text('Saint-Gobain',
         style: TextStyle(
-          color: lightColorScheme.onPrimary,
-          fontWeight: FontWeight.bold
+          color: Theme.of(context).colorScheme.onPrimaryContainer,
+          fontWeight: FontWeight.bold,
+          fontSize: Theme.of(context).textTheme.displaySmall?.fontSize
         ),),
       ),
       body: Obx(() => SafeArea(

@@ -15,154 +15,68 @@ class LogView extends StatelessWidget {
         children: [
           Expanded(
               child: ListView(
-                children: [
-                  InkWell(
-                    onTap: () => Get.defaultDialog(title: "Upload", content : const LogDialog()),
-                    child: const ListTile(
-                      leading: CircleAvatar(
-                        backgroundColor: Colors.lightBlue,
-                        child: Icon(Icons.factory),
-                      ),
-                      title: Text('Projetos', style: TextStyle(fontSize: 14),),
-                      subtitle: Text('Foram adicionados 4 novos Projetos', style: TextStyle(fontSize: 12),),
-                      trailing: Icon(Icons.more_vert),
+            children: [
+              InkWell(
+                onTap: () => Get.defaultDialog(
+                    title: "Upload", content: const LogDialog()),
+                child: ListTile(
+                  leading: CircleAvatar(
+                    backgroundColor: Theme.of(context).colorScheme.primary,
+                    child: Icon(
+                      Icons.factory,
+                      color: Theme.of(context).colorScheme.onPrimary,
                     ),
                   ),
-                  const ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.lightGreenAccent,
-                      child: Icon(Icons.person),
-                    ),
-                    title: Text('Staffs', style: TextStyle(fontSize: 14),),
-                    subtitle: Text('Foram adicionados 2 novos Funcionários', style: TextStyle(fontSize: 12),),
-                    trailing: Icon(Icons.more_vert),
+                  title: Text(
+                    'Projetos',
+                    style: TextStyle(
+                        fontSize:
+                            Theme.of(context).textTheme.titleMedium?.fontSize),
                   ),
-                  const ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.redAccent,
-                      child: Icon(Icons.construction),
-                    ),
-                    title: Text('Material', style: TextStyle(fontSize: 14),),
-                    subtitle: Text('Foi adicionado 1 novo Material', style: TextStyle(fontSize: 12),),
-                    trailing: Icon(Icons.more_vert),
+                  subtitle: Text(
+                    'Foram adicionados 4 novos Projetos',
+                    style: TextStyle(
+                        fontSize:
+                            Theme.of(context).textTheme.labelLarge?.fontSize),
                   ),
-                  const ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.lightBlue,
-                      child: Icon(Icons.factory),
+                  trailing: const Icon(Icons.more_vert),
+                ),
+              ),
+              InkWell(
+                onTap: () => Get.defaultDialog(
+                    title: "Upload", content: const LogDialog()),
+                child: ListTile(
+                  leading: CircleAvatar(
+                    backgroundColor: Theme.of(context).colorScheme.primary,
+                    child: Icon(
+                      Icons.construction,
+                      color: Theme.of(context).colorScheme.onPrimary,
                     ),
-                    title: Text('Projetos', style: TextStyle(fontSize: 14),),
-                    subtitle: Text('Foram adicionados 4 novos Projetos', style: TextStyle(fontSize: 12),),
-                    trailing: Icon(Icons.more_vert),
                   ),
-                  const ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.lightGreenAccent,
-                      child: Icon(Icons.person),
-                    ),
-                    title: Text('Staffs', style: TextStyle(fontSize: 14),),
-                    subtitle: Text('Foram adicionados 2 novos Funcionários', style: TextStyle(fontSize: 12),),
-                    trailing: Icon(Icons.more_vert),
+                  title: Text(
+                    'Materiais',
+                    style: TextStyle(
+                        fontSize:
+                            Theme.of(context).textTheme.titleMedium?.fontSize),
                   ),
-                  const ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.redAccent,
-                      child: Icon(Icons.construction),
-                    ),
-                    title: Text('Material', style: TextStyle(fontSize: 14),),
-                    subtitle: Text('Foi adicionado 1 novo Material', style: TextStyle(fontSize: 12),),
-                    trailing: Icon(Icons.more_vert),
+                  subtitle: Text(
+                    'Foram adicionados 4 novos Materiais',
+                    style: TextStyle(
+                        fontSize:
+                            Theme.of(context).textTheme.labelLarge?.fontSize),
                   ),
-                  const ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.lightBlue,
-                      child: Icon(Icons.factory),
-                    ),
-                    title: Text('Projetos', style: TextStyle(fontSize: 14),),
-                    subtitle: Text('Foram adicionados 4 novos Projetos', style: TextStyle(fontSize: 12),),
-                    trailing: Icon(Icons.more_vert),
-                  ),
-                  const ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.lightGreenAccent,
-                      child: Icon(Icons.person),
-                    ),
-                    title: Text('Staffs', style: TextStyle(fontSize: 14),),
-                    subtitle: Text('Foram adicionados 2 novos Funcionários', style: TextStyle(fontSize: 12),),
-                    trailing: Icon(Icons.more_vert),
-                  ),
-                  const ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.redAccent,
-                      child: Icon(Icons.construction),
-                    ),
-                    title: Text('Material', style: TextStyle(fontSize: 14),),
-                    subtitle: Text('Foi adicionado 1 novo Material', style: TextStyle(fontSize: 12),),
-                    trailing: Icon(Icons.more_vert),
-                  ),
-                  const ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.lightBlue,
-                      child: Icon(Icons.factory),
-                    ),
-                    title: Text('Projetos', style: TextStyle(fontSize: 14),),
-                    subtitle: Text('Foram adicionados 4 novos Projetos', style: TextStyle(fontSize: 12),),
-                    trailing: Icon(Icons.more_vert),
-                  ),
-                  const ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.lightGreenAccent,
-                      child: Icon(Icons.person),
-                    ),
-                    title: Text('Staffs', style: TextStyle(fontSize: 14),),
-                    subtitle: Text('Foram adicionados 2 novos Funcionários', style: TextStyle(fontSize: 12),),
-                    trailing: Icon(Icons.more_vert),
-                  ),
-                  const ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.redAccent,
-                      child: Icon(Icons.construction),
-                    ),
-                    title: Text('Material', style: TextStyle(fontSize: 14),),
-                    subtitle: Text('Foi adicionado 1 novo Material', style: TextStyle(fontSize: 12),),
-                    trailing: Icon(Icons.more_vert),
-                  ),
-                  const ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.lightBlue,
-                      child: Icon(Icons.factory),
-                    ),
-                    title: Text('Projetos', style: TextStyle(fontSize: 14),),
-                    subtitle: Text('Foram adicionados 4 novos Projetos', style: TextStyle(fontSize: 12),),
-                    trailing: Icon(Icons.more_vert),
-                  ),
-                  const ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.lightGreenAccent,
-                      child: Icon(Icons.person),
-                    ),
-                    title: Text('Staffs', style: TextStyle(fontSize: 14),),
-                    subtitle: Text('Foram adicionados 2 novos Funcionários', style: TextStyle(fontSize: 12),),
-                    trailing: Icon(Icons.more_vert),
-                  ),
-                  const ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.redAccent,
-                      child: Icon(Icons.construction),
-                    ),
-                    title: Text('Material', style: TextStyle(fontSize: 14),),
-                    subtitle: Text('Foi adicionado 1 novo Material', style: TextStyle(fontSize: 12),),
-                    trailing: Icon(Icons.more_vert),
-                  )
-                ],
-              )),
+                  trailing: const Icon(Icons.more_vert),
+                ),
+              ),
+            ],
+          )),
         ],
       ),
       floatingActionButton: Padding(
         padding: const EdgeInsets.all(10.0),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            minimumSize: const Size(double.infinity, 40),
+              minimumSize: const Size(double.infinity, 40),
               backgroundColor: lightColorScheme.primary,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5))),
@@ -172,7 +86,8 @@ class LogView extends StatelessWidget {
             style: TextStyle(color: Colors.white),
           ),
         ),
-      ),floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
