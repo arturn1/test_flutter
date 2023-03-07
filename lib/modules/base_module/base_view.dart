@@ -35,7 +35,7 @@ class BaseView extends GetView<BaseController> {
       ),
       body: Obx(() => SafeArea(
             child: AnimatedSwitcher(
-          duration: const Duration(milliseconds: 300),
+              duration: const Duration(milliseconds: 300),
               child: _mainContents[controller.page],
         )),
       ),
