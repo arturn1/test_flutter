@@ -32,6 +32,6 @@ class BaseController extends GetxController {
       return prefs.getBool('theme') ?? true;
     }).obs;
     _isLightTheme.value = (await isLight.value)!;
-    Get.changeThemeMode(_isLightTheme.value ? ThemeMode.light : ThemeMode.dark);
+    Get.changeThemeMode(_isLightTheme.value ? ThemeMode.dark : ThemeMode.light);
   }
 }
